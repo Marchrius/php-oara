@@ -257,7 +257,7 @@ class Zanox extends \Oara\Network
         } catch (\Exception $e) {
             $iteration++;
             if ($iteration < 5) {
-                $productList = self::getProducts($params, $iteration);
+                return self::getProducts($params, $iteration);
             }
         }
         return $productList;
